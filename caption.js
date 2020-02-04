@@ -17,7 +17,7 @@ const config = {
     enableWordTimeOffsets: true,
     encoding: 'LINEAR16',
     sampleRateHertz: '48000L',
-    languageCode: 'zh-TW',
+    languageCode: 'cmn-Hant-TW',
     audioChannelCount: 2
 };
 

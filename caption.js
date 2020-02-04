@@ -8,7 +8,7 @@ const client = new speech.SpeechClient();
 /**
  * TODO(developer): Uncomment the following lines before running the sample.
  */
-// const gcsUri = 'gs://my-bucket/audio.raw';
+const gcsUri = 'gs://leaderkid-audio-storage/output.wav';
 // const encoding = 'Encoding of the audio file, e.g. LINEAR16';
 // const sampleRateHertz = 16000;
 // const languageCode = 'BCP-47 language code, e.g. en-US';
@@ -21,7 +21,7 @@ const config = {
 };
 
 const audio = {
-    content: fs.readFileSync('output.mp3').toString('base64')
+    uri: gcsUri,
 };
 
 const request = {

@@ -21,7 +21,7 @@ const config = {
 };
 
 const audio = {
-    content: fs.readFileSync('../output.mp3').toString('base64')
+    content: fs.readFileSync('output.mp3').toString('base64')
 };
 
 const request = {

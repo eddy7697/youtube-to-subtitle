@@ -1,4 +1,5 @@
 // Imports the Google Cloud client library
+const fs = require('fs');
 const speech = require('@google-cloud/speech');
 
 // Creates a client

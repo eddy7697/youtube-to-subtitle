@@ -18,7 +18,10 @@ const config = {
     encoding: 'LINEAR16',
     sampleRateHertz: '48000L',
     languageCode: 'cmn-Hant-TW',
-    audioChannelCount: 2
+    audioChannelCount: 2,
+    speechContexts: [{
+        phrases: ["隔代教養", "威嚴"]
+    }]
 };
 
 const audio = {

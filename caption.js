@@ -14,9 +14,9 @@ const client = new speech.SpeechClient();
 
 const config = {
     enableWordTimeOffsets: true,
-    encoding: encoding,
-    sampleRateHertz: sampleRateHertz,
-    languageCode: languageCode,
+    encoding: 'LINEAR16',
+    sampleRateHertz: 16000,
+    languageCode: 'zh-TW',
 };
 
 const audio = {

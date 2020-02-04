@@ -18,6 +18,7 @@ const config = {
     encoding: 'LINEAR16',
     sampleRateHertz: '48000L',
     languageCode: 'zh-TW',
+    audioChannelCount: 2
 };
 
 const audio = {

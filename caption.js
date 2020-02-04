@@ -16,7 +16,7 @@ const gcsUri = 'gs://leaderkid-audio-storage/output.wav';
 const config = {
     enableWordTimeOffsets: true,
     encoding: 'LINEAR16',
-    sampleRateHertz: 16000,
+    sampleRateHertz: '48000L',
     languageCode: 'zh-TW',
 };
 

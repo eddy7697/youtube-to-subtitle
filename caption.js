@@ -42,20 +42,21 @@ async function startCaption() {
     const [response] = await operation.promise();
     response.results.forEach(result => {
         console.log(`Transcription: ${result.alternatives[0].transcript}`);
-        result.alternatives[0].words.forEach(wordInfo => {
-            // NOTE: If you have a time offset exceeding 2^32 seconds, use the
-            // wordInfo.{x}Time.seconds.high to calculate seconds.
-            const startSecs =
-                `${wordInfo.startTime.seconds}` +
-                `.` +
-                wordInfo.startTime.nanos / 100000000;
-            const endSecs =
-                `${wordInfo.endTime.seconds}` +
-                `.` +
-                wordInfo.endTime.nanos / 100000000;
-            console.log(`Word: ${wordInfo.word}`);
-            console.log(`\t ${startSecs} secs - ${endSecs} secs`);
-        });
+        fs.appendFileSync('result.txt', `${result.alternatives[0].transcript}\n`);
+        // result.alternatives[0].words.forEach(wordInfo => {
+        //     // NOTE: If you have a time offset exceeding 2^32 seconds, use the
+        //     // wordInfo.{x}Time.seconds.high to calculate seconds.
+        //     const startSecs =
+        //         `${wordInfo.startTime.seconds}` +
+        //         `.` +
+        //         wordInfo.startTime.nanos / 100000000;
+        //     const endSecs =
+        //         `${wordInfo.endTime.seconds}` +
+        //         `.` +
+        //         wordInfo.endTime.nanos / 100000000;
+        //     console.log(`Word: ${wordInfo.word}`);
+        //     console.log(`\t ${startSecs} secs - ${endSecs} secs`);
+        // });
     });
 }
 

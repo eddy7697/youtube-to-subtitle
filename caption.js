@@ -42,7 +42,7 @@ async function startCaption() {
     const [response] = await operation.promise();
     response.results.forEach(result => {
         console.log(`Transcription: ${result.alternatives[0].transcript}`);
-        fs.appendFileSync('result.txt', `${result.alternatives[0].transcript}\n`);
+        fs.appendFileSync('result.txt', `${result.alternatives[0].transcript}\n\n`);
         // result.alternatives[0].words.forEach(wordInfo => {
         //     // NOTE: If you have a time offset exceeding 2^32 seconds, use the
         //     // wordInfo.{x}Time.seconds.high to calculate seconds.
